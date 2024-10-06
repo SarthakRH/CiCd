@@ -1,0 +1,35 @@
+version: "3.1"
+
+services:
+
+  app:
+    build:
+      context: .
+    ports:
+      - 5173:5173
+      - 5000:5000
+    depends_on:
+      - db
+    networks:
+      network:
+        ipv4_address: 10.5.0.5
+
+  db:
+    image: mongo:7.0.2-jammy
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    expose:
+      - "27017"
+    networks:
+      network:
+        ipv4_address: 10.5.0.6
+
+networks:
+  network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1

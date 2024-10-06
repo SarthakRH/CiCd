@@ -1,0 +1,27 @@
+{
+  "name": "gyan",
+  "version": "1.0.0",
+  "description": "A platform for NITK students to share their internship and placement experiences",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon backend/app.js",
+    "start":"node backend/app.js"
+  },
+  "author": "Harshit Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.1"
+    
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}

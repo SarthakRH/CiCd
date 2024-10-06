@@ -1,0 +1,1 @@
+module.exports = ["CS", "AI", "IT", "EE", "EC", "ME", "MT", "CH", "CV", "MI"];
